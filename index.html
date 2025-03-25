@@ -3,38 +3,144 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Profil Keren</title>
+    <title>Portofolio</title>
     <link rel="stylesheet" href="style.css">
+    <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/boxicons/2.0.9/css/boxicons.min.css'>
 </head>
 <body>
-    <div class="container">
-        <div class="profile-header">
-            <img src="image/foto.jpg" alt="Foto Profil" class="profile-img">
-            <h1>Alya Difa Azzahra</h1>
-            <p class="bio">I'm a student at SMKN 1 Banyumas</p>
-        </div>
-        
-        <div class="biodata">
-            <h2>Biodata</h2>
+    <header>
+        <nav>
             <ul>
-                <li><strong>Tanggal Lahir:</strong> 18 Januari 2008</li>
-                <li><strong>Alamat:</strong> Banyumas</li>
-                <li><strong>Hobi:</strong> Mendengarkan musik</li>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#skills">Skills</a></li>
+                <li><a href="#projects">Projects</a></li>
             </ul>
-        </div>
+        </nav>
+    </header>
 
-        <div class="contact-info">
-            <h2>Informasi Kontak</h2>
-            <ul>
-                <li>Email: <a href="mailto:contoh@email.com">contoh@email.com</a></li>
-                <li>Telepon: 012-345-6789</li>
-                <li>LinkedIn: <a href="https://www.linkedin.com/in/username" target="_blank">linkedin.com/in/username</a></li>
-            </ul>
+    <section id="home" class="hero">
+        <div class="container">
+            <h2 class="greeting">Selamat Datang!</h2>
+            <div class="profile-header">
+                <img src="image/foto.jpg" alt="Foto Profil" class="profile-img">
+                <h1 class="animated-title"><span id="typed-text"></span></h1>
+                <p class="bio">I'm a student at SMKN 1 Banyumas</p>
+            </div>
         </div>
+    </section>
 
-        <div class="copyright">
-            <p>&copy; 2023 Alya Difa Azzahra. Semua hak dilindungi.</p>
+    <section id="about" class="section">
+        <h2>Biodata</h2>
+        <ul>
+            <li><strong>Alamat:</strong> Banyumas</li>
+            <li><strong>Hobi:</strong> Mendengarkan musik</li>
+            <li><strong>Motto:</strong> Tidak ada yang benar-benar sulit, hanya butuh lebih banyak usaha.</li>
+        </ul>
+    </section>
+
+    <section id="skills" class="section">
+        <h2>Skills</h2>
+        <div class="skills-chart">
+            <div class="skill">
+                <div class="skill-name">HTML</div>
+                <div class="skill-bar"><div class="skill-level html"></div></div>
+            </div>
+            <div class="skill">
+                <div class="skill-name">CSS</div>
+                <div class="skill-bar"><div class="skill-level css"></div></div>
+            </div>
+            <div class="skill">
+                <div class="skill-name"> JavaScript</div>
+                <div class="skill-bar"><div class="skill-level javascript"></div></div>
+            </div>
+        </div>
+    </section>
+
+    <section id="projects" class="section">
+        <h2>Projects</h2>
+        <div class="projects-container">
+            <div class="project-item" onclick="openModal('project1')">
+                <img src="image/project1-thumbnail.jpg" alt="Project 1" class="project-img">
+                <h3>Project 1: 3D Model</h3>
+                <p>A 3D modeling project show3Dcasing my skills in Blender.</p>
+                <a href="https://github.com/username/project1" target="_blank" class="btn">View on GitHub</a>
+            </div>
+            <div class="project-item" onclick="openModal('project2')">
+                <img src="image/project2-thumbnail.jpg" alt="Project 2" class="project-img">
+                <h3>Project 2: Web Design</h3>
+                <p>A responsive website built using HTML, CSS, and JavaScript.</p>
+                <a href="https://github.com/username/project2" target="_blank" class="btn">View on GitHub</a>
+            </div>
+            <div class="project-item" onclick="openModal('project3')">
+                <img src="image/project3-thumbnail.jpg" alt="Project 3" class="project-img">
+                <h3>Project 3: Mobile App</h3>
+                <p>An interactive mobile app I developed as part of my coursework.</p>
+                <a href="https://github.com/username/project3" target="_blank" class="btn">View on GitHub</a>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="social">
+            <a href="https://id.linkedin.com/in/alya-difa-azzahra-83245b315"><i class='bx bxl-linkedin'></i></a>
+            <a href="https://github.com/alydfazz"><i class='bx bxl-github'></i></a>
+            <a href="https://www.instagram.com/alyadfazz/"><i class='bx bxl-instagram-alt'></i></a>
+        </div>
+        <p>&copy; 2025 Alya Difa Azzahra. Semua hak dilindungi.</p>
+    </footer>
+
+    <div id="project1" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal('project1')">&times;</span>
+            <h3>Project 1: 3D Model</h3>
+            <p>A detailed description of the 3D modeling project showcasing my skills in Blender.</p>
+            <a href="https://github.com/username/project1" target="_blank" class="btn">View on GitHub</a>
         </div>
     </div>
+
+    <div id="project2" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal('project2')">&times;</span>
+            <h3>Project 2: Web Design</h3>
+            <p>A detailed description of the responsive website built using HTML, CSS, and JavaScript.</p>
+            <a href="https://github.com/username/project2" target="_blank" class="btn">View on GitHub</a>
+        </div>
+    </div>
+
+    <div id="project3" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal('project3')">&times;</span>
+            <h3>Project 3: Mobile App</h3>
+            <p>A detailed description of the interactive mobile app I developed as part of my coursework.</p>
+            <a href="https://github.com/username/project3" target="_blank" class="btn">View on GitHub</a>
+        </div>
+    </div>
+
+    <script>
+        const text = "Alya Difa Azzahra";
+        const typingSpeed = 100; 
+        let index = 0;
+
+        function type() {
+            if (index < text.length) {
+                document.getElementById("typed-text").innerHTML += text.charAt(index);
+                index++;
+                setTimeout(type, typingSpeed);
+            }
+        }
+
+        window.onload = function() {
+            type();
+        };
+
+        function openModal(projectId) {
+            document.getElementById(projectId).style.display = "block";
+        }
+
+        function closeModal(projectId) {
+            document.getElementById(projectId).style.display = "none";
+        }
+    </script>
 </body>
 </html>
